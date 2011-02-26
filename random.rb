@@ -5,7 +5,8 @@ require 'rexml/document'
 require 'pp'
 
 get '/' do
-  "Hello from Sinatra on Heroku!"
+  "The source code for #{deploy_url} can be accessed on #{github_link}<br/>" +
+                                                    "By Brian Jordan"
 end
 
 get '/random.jpg' do
@@ -29,4 +30,12 @@ def get_photo_id
   end
 
   photo_urls.shuffle[0]
+end
+
+def github_link
+  '<a href="https://github.com/bcjordan/random.jpg">github</a>'
+end
+
+def deploy_url
+  '<a href="http://randomimage.heroku.com/random.jpg">random.jpg</a>'
 end
