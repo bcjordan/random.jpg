@@ -10,9 +10,12 @@ get '/' do
 end
 
 get '/random.jpg' do
-  content_type :jpg
-  file = open("#{get_photo_id}")
-  file.read
+  redirect "#{get_photo_id}"
+
+#  To download, instead:  
+#  content_type :jpg
+#  file = open("#{get_photo_id}")
+#  file.read
 end
 
 def get_photo_id
