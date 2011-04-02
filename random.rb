@@ -22,7 +22,7 @@ get '/random.jpg' do
 end
 
 def get_pin_url
-  url = "https://chart.googleapis.com/chart?chst=d_map_xpin_letter&chld=pin|+|#{"%06x" % (rand * 0xffffff)}|000000|FF0000"
+  url = "http://chart.googleapis.com/chart?chst=d_map_xpin_letter&chld=pin|+|#{"%06x" % (rand * 0xffffff)}|000000|FF0000"
 
 def get_photo_id
   url = "http://api.flickr.com/services/feeds/photos_public.gne"
