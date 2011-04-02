@@ -23,6 +23,7 @@ end
 
 def get_pin_url
   url = "http://chart.googleapis.com/chart?chst=d_map_xpin_letter&chld=pin|+|#{"%06x" % (rand * 0xffffff)}|000000|FF0000"
+end
 
 def get_photo_id
   url = "http://api.flickr.com/services/feeds/photos_public.gne"
