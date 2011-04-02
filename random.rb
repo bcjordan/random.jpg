@@ -11,6 +11,7 @@ end
 
 get '/random_pin.png' do
   redirect  "#{get_pin_url}"
+end
 
 get '/random.jpg' do
   redirect "#{get_photo_id}"
