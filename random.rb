@@ -9,6 +9,9 @@ get '/' do
                                                     "By Brian Jordan"
 end
 
+get '/random_pin.png' do
+  redirect  "#{get_pin_url}"
+
 get '/random.jpg' do
   redirect "#{get_photo_id}"
 
@@ -17,6 +20,9 @@ get '/random.jpg' do
 #  file = open("#{get_photo_id}")
 #  file.read
 end
+
+def get_pin_url
+  url = "https://chart.googleapis.com/chart?chst=d_map_xpin_letter&chld=pin|+|#{"%06x" % (rand * 0xffffff)}|000000|FF0000"
 
 def get_photo_id
   url = "http://api.flickr.com/services/feeds/photos_public.gne"
